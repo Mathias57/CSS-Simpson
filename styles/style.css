@@ -1,15 +1,25 @@
-body{
+body {
   margin: 0;
   background: #f8cd46;
   height: 100vh;
   width: 100vw;
 }
 
-*{
+/* TYPOGRAPHY */
+
+@font-face {
+  font-family: 'Simpsonfont';
+  src: url('../fonts/OriginallycompiledbyJonBernhardt.woff') format('woff2'),
+      url('../fonts/OriginallycompiledbyJonBernhardt.woff2') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
   cursor: pointer;
 }
 
-h1{
+h1 {
   text-align: center;
   margin: 0 auto;
   font-size: 100px;
@@ -21,15 +31,25 @@ h1{
   animation-direction: alternate;
 }
 
-@keyframes title-animation
-{
-    0%   { left:0px; }
-    50%  { left:800px; }
-    70%  { left:250px; }
-    100% { left:500px; }
+@keyframes title-animation {
+  0% {
+    left: 0px;
+  }
+
+  50% {
+    left: 800px;
+  }
+
+  70% {
+    left: 250px;
+  }
+
+  100% {
+    left: 500px;
+  }
 }
 
-.header{
+.header {
   position: fixed;
   top: 0px;
   width: 100%;
@@ -38,7 +58,7 @@ h1{
   opacity: 0.80;
 }
 
-.main .donuts_1 img{
+.main .donuts_1 img {
   position: absolute;
   top: 40%;
   left: 30%;
@@ -50,15 +70,25 @@ h1{
   animation-iteration-count: infinite;
 }
 
-@keyframes donut1-animation
-{
-  0%   { left:0px; }
-  50%  { left:800px; }
-  70%  { left:250px; }
-  100% { left:500px; }
+@keyframes donut1-animation {
+  0% {
+    left: 0px;
+  }
+
+  50% {
+    left: 800px;
+  }
+
+  70% {
+    left: 250px;
+  }
+
+  100% {
+    left: 500px;
+  }
 }
 
-.main .donuts_2 img{
+.main .donuts_2 img {
   position: absolute;
   top: 40%;
   left: 10%;
@@ -66,7 +96,7 @@ h1{
   height: 50px;
 }
 
-.main .donuts_3 img{
+.main .donuts_3 img {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -74,7 +104,7 @@ h1{
   height: 50px;
 }
 
-.main .donuts_4 img{
+.main .donuts_4 img {
   position: absolute;
   top: 40%;
   left: 60%;
@@ -82,7 +112,7 @@ h1{
   height: 50px;
 }
 
-.main .donuts_5 img{
+.main .donuts_5 img {
   position: absolute;
   top: 40%;
   left: 70%;
@@ -90,7 +120,7 @@ h1{
   height: 50px;
 }
 
-.main .donuts_6 img{
+.main .donuts_6 img {
   position: absolute;
   top: 40%;
   left: 80%;
@@ -98,7 +128,7 @@ h1{
   height: 50px;
 }
 
-.eyes{
+.eyes {
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
@@ -107,7 +137,7 @@ h1{
   z-index: 2;
 }
 
-.eye{
+.eye {
   width: 170px;
   height: 170px;
   background: #fff;
@@ -119,19 +149,19 @@ h1{
   border: 3px solid #000000;
 }
 
-.ball{
+.ball {
   width: 20px;
   height: 20px;
   background: #000;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   z-index: 1;
 }
 
-.eye .eyelids{
+.eye .eyelids {
   height: 0px;
   width: 170px;
   background: #d0b187;
@@ -148,24 +178,33 @@ h1{
 
 }
 
-@keyframes eyelids-animation
-{
-  0%  {height: 0px}
-  3% {height: 170px}
-  5% {height: 0px}
+@keyframes eyelids-animation {
+  0% {
+    height: 0px
+  }
 
- 100% {height: 0px}
+  3% {
+    height: 170px
+  }
+
+  5% {
+    height: 0px
+  }
+
+  100% {
+    height: 0px
+  }
 
 }
 
 
-.nose{
+.nose {
   position: absolute;
   top: 48%;
-  left : 48%;
+  left: 48%;
   border-radius: 0px 0px 50px 50px;
-  width:50px;
-  height:66px;
+  width: 50px;
+  height: 66px;
   background: #f2cd60;
   border: 3px solid #000000;
   z-index: 1;
@@ -173,7 +212,7 @@ h1{
 
 }
 
-.mouth{
+.mouth {
   position: absolute;
   top: 53%;
   left: 41%;
@@ -185,7 +224,7 @@ h1{
 
 }
 
-.mouth .smile{
+.mouth .smile {
   position: absolute;
   top: 55%;
   left: 29%;
@@ -201,13 +240,21 @@ h1{
 }
 
 @keyframes mouth-move {
-  0% { transform: scaleY(0.1);}
-  30% { transform: scaleY(1);}
-  100% {transform: scaleY(0.1);}
+  0% {
+    transform: scaleY(0.1);
+  }
+
+  30% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(0.1);
+  }
 
 }
 
-.main .donuts_1 img{
+.main .donuts_1 img {
   position: absolute;
   left: -10%;
   top: 75%;
@@ -221,8 +268,11 @@ h1{
   z-index: 4;
 }
 
-@keyframes donuts-move{
-  0% { transform: translateX(0vh) rotateZ(0deg) rotateX(0deg);}
+@keyframes donuts-move {
+  0% {
+    transform: translateX(0vh) rotateZ(0deg) rotateX(0deg);
+  }
+
   80% {
     transform: translateX(110vh) rotateZ(800deg) rotateX(0deg);
     opacity: 1;
@@ -230,6 +280,6 @@ h1{
 
   100% {
     transform: translateX(110vh) rotateZ(0deg);
-     opacity: 0;
-   }
+    opacity: 0;
+  }
 }
